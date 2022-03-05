@@ -26,3 +26,4 @@ Route::get('/hello', function() {
 Route::get('/ola', [HomeController::class, 'index']);
 
 Route::get('/produtos', [ProdutoController::class, 'index']);
+Route::get('/produtos/{id}', [ProdutoController::class, 'show']);
