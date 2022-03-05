@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\GrupoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,3 +32,6 @@ Route::get('/produtos/{id}', [ProdutoController::class, 'show']);
 
 Route::get('/usuarios', [UsuarioController::class, 'index']);
 Route::get('/usuarios/{id}', [UsuarioController::class, 'show']);
+
+Route::get('/grupos', [GrupoController::class, 'index']);
+Route::get('/grupos/{id}', [GrupoController::class, 'show']);
