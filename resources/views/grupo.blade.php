@@ -18,6 +18,7 @@
                 <th>disciplina</th>
                 <th>Nº máximo de membros</th>
                 <th>Público</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -28,6 +29,10 @@
                 <td>{{$grupo->disciplina}}</td>
                 <td>{{$grupo->max_membros}}</td>
                 <td>{{($grupo->eh_publico)?'Sim':'Não'}}</td>
+                <td>
+                    <a href="{{ route('edit', $grupo->id) }}">Editar</a>
+                    <a href="{{ route('delete', $grupo->id) }}">Deletar</a>
+                </td>
             </tr>
         </tbody>
     </table>

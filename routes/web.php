@@ -32,6 +32,16 @@ Route::get('/produtos/{id}', [ProdutoController::class, 'show']);
 
 Route::get('/usuarios', [UsuarioController::class, 'index']);
 Route::get('/usuarios/{id}', [UsuarioController::class, 'show']);
+Route::get('/usuario', [UsuarioController::class, 'create']);
+Route::post('/usuario', [UsuarioController::class, 'store']);
+Route::post('/usuario/{id}/update', [UsuarioController::class, 'update']);
+Route::get('/usuario/{id}/edit', [UsuarioController::class, 'edit']);
+Route::get('/usuario/{id}/delete', [UsuarioController::class, 'delete']);
 
 Route::get('/grupos', [GrupoController::class, 'index']);
 Route::get('/grupos/{id}', [GrupoController::class, 'show']);
+Route::get('/grupo', [GrupoController::class, 'create']);
+Route::post('/grupo', [GrupoController::class, 'store']);
+Route::post('/grupo/{id}/update', [GrupoController::class, 'update']);
+Route::get('/grupo/{id}/edit', [UsuarioController::class, 'edit']);
+Route::get('/grupo/{id}/delete', [UsuarioController::class, 'delete']);

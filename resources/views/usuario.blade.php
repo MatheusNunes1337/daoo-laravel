@@ -16,6 +16,7 @@
                 <th>Nome de usuário</th>
                 <th>email</th>
                 <th>tipo</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -24,6 +25,10 @@
                 <td>{{$usuario->username}}</td>
                 <td>{{$usuario->email}}</td>
                 <td>{{$usuario->tipo}}</td>
+                <td>
+                    <a href="{{ route('edit', $usuario->id) }}">Editar</a>
+                    <a href="{{ route('delete', $usuario->id) }}">Deletar</a>
+                </td>
             </tr>
         </tbody>
     </table>
