@@ -31,7 +31,7 @@ class GrupoController extends Controller
         $newGrupo = $request->all();
         $newGrupo['eh_publico']=($request->eh_publico)?true:false;
         if(Grupo::create($newGrupo))
-            redirect('/grupos');
+            return redirect('/grupos');
         else
             dd('Erro ao cadastrar grupo');
     }

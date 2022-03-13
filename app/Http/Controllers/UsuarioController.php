@@ -27,7 +27,7 @@ class UsuarioController extends Controller
     public function store(Request $request) {
         $newUsuario = $request->all();
         if(Usuario::create($newUsuario))
-            redirect('/usuarios');
+            return redirect('/usuarios');
         else
             dd('Erro ao cadastrar usuário');
     }

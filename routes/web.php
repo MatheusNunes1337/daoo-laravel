@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\GrupoController;
+use App\Http\Controllers\PostagemController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,3 +46,11 @@ Route::post('/grupo', [GrupoController::class, 'store']);
 Route::post('/grupo/{id}/update', [GrupoController::class, 'update']);
 Route::get('/grupo/{id}/edit', [UsuarioController::class, 'edit']);
 Route::get('/grupo/{id}/delete', [UsuarioController::class, 'delete']);
+
+Route::get('/postagens', [PostagemController::class, 'index']);
+Route::get('/postagens/{id}', [PostagemController::class, 'show']);
+Route::get('/postagem', [PostagemController::class, 'create']);
+Route::post('/postagem', [PostagemController::class, 'store']);
+Route::post('/postagem/{id}/update', [PostagemController::class, 'update']);
+Route::get('/postagem/{id}/edit', [PostagemController::class, 'edit']);
+Route::get('/postagem/{id}/delete', [PostagemController::class, 'delete']);

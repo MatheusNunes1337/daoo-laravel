@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-
 <body>
     <h1>Criar novo grupo</h1>
     <form action="/grupo" method="POST">
