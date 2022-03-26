@@ -15,6 +15,9 @@ class CreateProdutosTable extends Migration
     {
         Schema::create('produtos', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('fornecedor_id')
+            ->references('id')->on('fornecedores')
+            ->cascadeOnDelete();
             $table->text('nome');
             $table->text('descricao');
             $table->integer('qtd_estoque');
